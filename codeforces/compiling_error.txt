@@ -1,0 +1,7 @@
+/home/amit/Documents/competitive/codeforces/677A.cpp: In function ‘int main()’:
+/home/amit/Documents/competitive/codeforces/677A.cpp:9:15: error: expected unqualified-id before ‘int’
+   int wd = 0, int temp;
+               ^~~
+/home/amit/Documents/competitive/codeforces/677A.cpp:11:10: error: ‘temp’ was not declared in this scope
+     cin>>temp;
+          ^~~~

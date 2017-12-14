@@ -1,7 +1,1147 @@
-/home/amit/Documents/competitive/codeforces/677A.cpp: In function ‘int main()’:
-/home/amit/Documents/competitive/codeforces/677A.cpp:9:15: error: expected unqualified-id before ‘int’
-   int wd = 0, int temp;
-               ^~~
-/home/amit/Documents/competitive/codeforces/677A.cpp:11:10: error: ‘temp’ was not declared in this scope
-     cin>>temp;
-          ^~~~
+/home/amit/Documents/competitive/codeforces/4C.cpp: In function ‘int main(int, const char**)’:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:25: error: no match for ‘operator=’ (operand types are ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ and ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’)
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                         ^
+In file included from /usr/include/c++/6/list:63:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:79,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_list.h:128:12: note: candidate: constexpr std::_List_iterator<std::__cxx11::basic_string<char> >& std::_List_iterator<std::__cxx11::basic_string<char> >::operator=(const std::_List_iterator<std::__cxx11::basic_string<char> >&)
+     struct _List_iterator
+            ^~~~~~~~~~~~~~
+/usr/include/c++/6/bits/stl_list.h:128:12: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ to ‘const std::_List_iterator<std::__cxx11::basic_string<char> >&’
+/usr/include/c++/6/bits/stl_list.h:128:12: note: candidate: constexpr std::_List_iterator<std::__cxx11::basic_string<char> >& std::_List_iterator<std::__cxx11::basic_string<char> >::operator=(std::_List_iterator<std::__cxx11::basic_string<char> >&&)
+/usr/include/c++/6/bits/stl_list.h:128:12: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ to ‘std::_List_iterator<std::__cxx11::basic_string<char> >&&’
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:30: error: no match for ‘operator!=’ (operand types are ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ and ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’)
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                            ~~^~~~~~~~~~~~
+In file included from /usr/include/c++/6/list:63:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:79,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_list.h:194:7: note: candidate: bool std::_List_iterator< <template-parameter-1-1> >::operator!=(const _Self&) const [with _Tp = std::__cxx11::basic_string<char>; std::_List_iterator< <template-parameter-1-1> >::_Self = std::_List_iterator<std::__cxx11::basic_string<char> >]
+       operator!=(const _Self& __x) const _GLIBCXX_NOEXCEPT
+       ^~~~~~~~
+/usr/include/c++/6/bits/stl_list.h:194:7: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ to ‘const _Self& {aka const std::_List_iterator<std::__cxx11::basic_string<char> >&}’
+In file included from /usr/include/c++/6/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:110,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/regex.h:951:5: note: candidate: template<class _BiIter> bool std::__cxx11::operator!=(const std::__cxx11::sub_match<_BiIter>&, const std::__cxx11::sub_match<_BiIter>&)
+     operator!=(const sub_match<_BiIter>& __lhs, const sub_match<_BiIter>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/6/bits/regex.h:951:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:110,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/regex.h:1029:5: note: candidate: template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator!=(std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&, const std::__cxx11::sub_match<_BiIter>&)
+     operator!=(const __sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/regex.h:1029:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:110,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/regex.h:1109:5: note: candidate: template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator!=(const std::__cxx11::sub_match<_BiIter>&, std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&)
+     operator!=(const sub_match<_Bi_iter>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/regex.h:1109:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:110,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/regex.h:1186:5: note: candidate: template<class _Bi_iter> bool std::__cxx11::operator!=(const typename std::iterator_traits<_Iter>::value_type*, const std::__cxx11::sub_match<_BiIter>&)
+     operator!=(typename iterator_traits<_Bi_iter>::value_type const* __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/regex.h:1186:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:110,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/regex.h:1260:5: note: candidate: template<class _Bi_iter> bool std::__cxx11::operator!=(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type*)
+     operator!=(const sub_match<_Bi_iter>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/regex.h:1260:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:110,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/regex.h:1337:5: note: candidate: template<class _Bi_iter> bool std::__cxx11::operator!=(const typename std::iterator_traits<_Iter>::value_type&, const std::__cxx11::sub_match<_BiIter>&)
+     operator!=(typename iterator_traits<_Bi_iter>::value_type const& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/regex.h:1337:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:110,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/regex.h:1417:5: note: candidate: template<class _Bi_iter> bool std::__cxx11::operator!=(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type&)
+     operator!=(const sub_match<_Bi_iter>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/regex.h:1417:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__cxx11::sub_match<_BiIter>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/regex:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:110,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/regex.h:1944:5: note: candidate: template<class _Bi_iter, class _Alloc> bool std::__cxx11::operator!=(const std::__cxx11::match_results<_BiIter, _Alloc>&, const std::__cxx11::match_results<_BiIter, _Alloc>&)
+     operator!=(const match_results<_Bi_iter, _Alloc>& __m1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/regex.h:1944:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__cxx11::match_results<_BiIter, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/unordered_set:48:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:118,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/unordered_set.h:1429:5: note: candidate: template<class _Value, class _Hash, class _Pred, class _Alloc> bool std::operator!=(const std::unordered_multiset<_Value, _Hash, _Pred, _Alloc>&, const std::unordered_multiset<_Value, _Hash, _Pred, _Alloc>&)
+     operator!=(const unordered_multiset<_Value, _Hash, _Pred, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/unordered_set.h:1429:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::unordered_multiset<_Value, _Hash, _Pred, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/unordered_set:48:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:118,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/unordered_set.h:1417:5: note: candidate: template<class _Value, class _Hash, class _Pred, class _Alloc> bool std::operator!=(const std::unordered_set<_Value, _Hash, _Pred, _Alloc>&, const std::unordered_set<_Value, _Hash, _Pred, _Alloc>&)
+     operator!=(const unordered_set<_Value, _Hash, _Pred, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/unordered_set.h:1417:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::unordered_set<_Value, _Hash, _Pred, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/unordered_map:48:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:117,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/unordered_map.h:1786:5: note: candidate: template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::operator!=(const std::unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>&, const std::unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>&)
+     operator!=(const unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/unordered_map.h:1786:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/unordered_map:48:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:117,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/unordered_map.h:1774:5: note: candidate: template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::operator!=(const std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>&, const std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>&)
+     operator!=(const unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/unordered_map.h:1774:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:111:0,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/scoped_allocator:465:5: note: candidate: template<class _OutA1, class _OutA2, class ... _InA> bool std::operator!=(const std::scoped_allocator_adaptor<_OutA1, _InA ...>&, const std::scoped_allocator_adaptor<_InnerHead, _InnerTail ...>&)
+     operator!=(const scoped_allocator_adaptor<_OutA1, _InA...>& __a,
+     ^~~~~~~~
+/usr/include/c++/6/scoped_allocator:465:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::scoped_allocator_adaptor<_OutA1, _InA ...>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:5841:5: note: candidate: template<class _RealType> bool std::operator!=(const std::piecewise_linear_distribution<_RealType>&, const std::piecewise_linear_distribution<_RealType>&)
+     operator!=(const std::piecewise_linear_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:5841:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::piecewise_linear_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:5571:5: note: candidate: template<class _RealType> bool std::operator!=(const std::piecewise_constant_distribution<_RealType>&, const std::piecewise_constant_distribution<_RealType>&)
+     operator!=(const std::piecewise_constant_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:5571:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::piecewise_constant_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:5304:5: note: candidate: template<class _IntType> bool std::operator!=(const std::discrete_distribution<_IntType>&, const std::discrete_distribution<_IntType>&)
+     operator!=(const std::discrete_distribution<_IntType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:5304:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::discrete_distribution<_IntType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:5044:5: note: candidate: template<class _RealType> bool std::operator!=(const std::extreme_value_distribution<_RealType>&, const std::extreme_value_distribution<_RealType>&)
+     operator!=(const std::extreme_value_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:5044:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::extreme_value_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:4841:5: note: candidate: template<class _RealType> bool std::operator!=(const std::weibull_distribution<_RealType>&, const std::weibull_distribution<_RealType>&)
+     operator!=(const std::weibull_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:4841:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::weibull_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:4638:5: note: candidate: template<class _RealType> bool std::operator!=(const std::exponential_distribution<_RealType>&, const std::exponential_distribution<_RealType>&)
+     operator!=(const std::exponential_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:4638:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::exponential_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:4460:5: note: candidate: template<class _IntType> bool std::operator!=(const std::poisson_distribution<_IntType>&, const std::poisson_distribution<_IntType>&)
+     operator!=(const std::poisson_distribution<_IntType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:4460:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::poisson_distribution<_IntType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:4244:5: note: candidate: template<class _IntType> bool std::operator!=(const std::negative_binomial_distribution<_IntType>&, const std::negative_binomial_distribution<_IntType>&)
+     operator!=(const std::negative_binomial_distribution<_IntType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:4244:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::negative_binomial_distribution<_IntType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:3999:5: note: candidate: template<class _IntType> bool std::operator!=(const std::geometric_distribution<_IntType>&, const std::geometric_distribution<_IntType>&)
+     operator!=(const std::geometric_distribution<_IntType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:3999:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::geometric_distribution<_IntType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:3830:5: note: candidate: template<class _IntType> bool std::operator!=(const std::binomial_distribution<_IntType>&, const std::binomial_distribution<_IntType>&)
+     operator!=(const std::binomial_distribution<_IntType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:3830:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::binomial_distribution<_IntType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:3564:3: note: candidate: bool std::operator!=(const std::bernoulli_distribution&, const std::bernoulli_distribution&)
+   operator!=(const std::bernoulli_distribution& __d1,
+   ^~~~~~~~
+/usr/include/c++/6/bits/random.h:3564:3: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ to ‘const std::bernoulli_distribution&’
+/usr/include/c++/6/bits/random.h:3388:5: note: candidate: template<class _RealType> bool std::operator!=(const std::student_t_distribution<_RealType>&, const std::student_t_distribution<_RealType>&)
+     operator!=(const std::student_t_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:3388:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::student_t_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:3175:5: note: candidate: template<class _RealType> bool std::operator!=(const std::fisher_f_distribution<_RealType>&, const std::fisher_f_distribution<_RealType>&)
+     operator!=(const std::fisher_f_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:3175:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::fisher_f_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:2919:5: note: candidate: template<class _RealType> bool std::operator!=(const std::cauchy_distribution<_RealType>&, const std::cauchy_distribution<_RealType>&)
+     operator!=(const std::cauchy_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:2919:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::cauchy_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:2752:5: note: candidate: template<class _RealType> bool std::operator!=(const std::chi_squared_distribution<_RealType>&, const std::chi_squared_distribution<_RealType>&)
+     operator!=(const std::chi_squared_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:2752:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::chi_squared_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:2542:6: note: candidate: template<class _RealType> bool std::operator!=(const std::gamma_distribution<_RealType>&, const std::gamma_distribution<_RealType>&)
+      operator!=(const std::gamma_distribution<_RealType>& __d1,
+      ^~~~~~~~
+/usr/include/c++/6/bits/random.h:2542:6: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::gamma_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:2322:5: note: candidate: template<class _RealType> bool std::operator!=(const std::lognormal_distribution<_RealType>&, const std::lognormal_distribution<_RealType>&)
+     operator!=(const std::lognormal_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:2322:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::lognormal_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:2118:5: note: candidate: template<class _RealType> bool std::operator!=(const std::normal_distribution<_RealType>&, const std::normal_distribution<_RealType>&)
+     operator!=(const std::normal_distribution<_RealType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:2118:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::normal_distribution<_RealType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:1869:5: note: candidate: template<class _IntType> bool std::operator!=(const std::uniform_real_distribution<_IntType>&, const std::uniform_real_distribution<_IntType>&)
+     operator!=(const std::uniform_real_distribution<_IntType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:1869:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::uniform_real_distribution<_IntType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:1660:5: note: candidate: template<class _IntType> bool std::operator!=(const std::uniform_int_distribution<_IntType>&, const std::uniform_int_distribution<_IntType>&)
+     operator!=(const std::uniform_int_distribution<_IntType>& __d1,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:1660:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::uniform_int_distribution<_IntType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:1502:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __k> bool std::operator!=(const std::shuffle_order_engine<_RandomNumberEngine, __k>&, const std::shuffle_order_engine<_RandomNumberEngine, __k>&)
+     operator!=(const std::shuffle_order_engine<_RandomNumberEngine,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:1502:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::shuffle_order_engine<_RandomNumberEngine, __k>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:1250:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __w, class _UIntType> bool std::operator!=(const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&, const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&)
+     operator!=(const std::independent_bits_engine<_RandomNumberEngine, __w,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:1250:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:1054:5: note: candidate: template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r> bool std::operator!=(const std::discard_block_engine<_RandomNumberEngine, __p, __r>&, const std::discard_block_engine<_RandomNumberEngine, __p, __r>&)
+     operator!=(const std::discard_block_engine<_RandomNumberEngine, __p,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:1054:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::discard_block_engine<_RandomNumberEngine, __p, __r>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:832:5: note: candidate: template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r> bool std::operator!=(const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>&, const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>&)
+     operator!=(const std::subtract_with_carry_engine<_UIntType, __w,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:832:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:636:5: note: candidate: template<class _UIntType, long unsigned int __w, long unsigned int __n, long unsigned int __m, long unsigned int __r, _UIntType __a, long unsigned int __u, _UIntType __d, long unsigned int __s, _UIntType __b, long unsigned int __t, _UIntType __c, long unsigned int __l, _UIntType __f> bool std::operator!=(const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&, const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)
+     operator!=(const std::mersenne_twister_engine<_UIntType, __w, __n, __m,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:636:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/random:49:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:108,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/random.h:404:5: note: candidate: template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> bool std::operator!=(const std::linear_congruential_engine<_UIntType, __a, __c, __m>&, const std::linear_congruential_engine<_UIntType, __a, __c, __m>&)
+     operator!=(const std::linear_congruential_engine<_UIntType, __a,
+     ^~~~~~~~
+/usr/include/c++/6/bits/random.h:404:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::linear_congruential_engine<_UIntType, __a, __c, __m>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/future:40:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:105,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/thread:235:3: note: candidate: bool std::operator!=(std::thread::id, std::thread::id)
+   operator!=(thread::id __x, thread::id __y) noexcept
+   ^~~~~~~~
+/usr/include/c++/6/thread:235:3: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ to ‘std::thread::id’
+In file included from /usr/include/c++/6/forward_list:38:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:104,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/forward_list.h:1384:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator!=(const std::forward_list<_Tp, _Alloc>&, const std::forward_list<_Tp, _Alloc>&)
+     operator!=(const forward_list<_Tp, _Alloc>& __lx,
+     ^~~~~~~~
+/usr/include/c++/6/bits/forward_list.h:1384:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::forward_list<_Tp, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/forward_list:38:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:104,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/forward_list.h:266:5: note: candidate: template<class _Tp> bool std::operator!=(const std::_Fwd_list_iterator<_Tp>&, const std::_Fwd_list_const_iterator<_Tp>&)
+     operator!=(const _Fwd_list_iterator<_Tp>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/forward_list.h:266:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::_Fwd_list_iterator<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:95:0,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/valarray:1180:1: note: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__not_equal_to, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const _Tp&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+ ^
+/usr/include/c++/6/valarray:1180:1: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::valarray<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:95:0,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/valarray:1180:1: note: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__not_equal_to, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const std::valarray<_Tp>&, const _Tp&)
+ _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+ ^
+/usr/include/c++/6/valarray:1180:1: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::valarray<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:95:0,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/valarray:1180:1: note: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__not_equal_to, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const std::valarray<_Tp>&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+ ^
+/usr/include/c++/6/valarray:1180:1: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::valarray<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:95,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/valarray_after.h:415:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__not_equal_to, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+     ^
+/usr/include/c++/6/bits/valarray_after.h:415:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:95,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/valarray_after.h:415:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__not_equal_to, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+     ^
+/usr/include/c++/6/bits/valarray_after.h:415:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:95,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/valarray_after.h:415:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__not_equal_to, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+     ^
+/usr/include/c++/6/bits/valarray_after.h:415:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:95,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/valarray_after.h:415:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__not_equal_to, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)
+     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+     ^
+/usr/include/c++/6/bits/valarray_after.h:415:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/valarray:587:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:95,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/valarray_after.h:415:5: note: candidate: template<class _Dom1, class _Dom2> std::_Expr<std::_BinClos<std::__not_equal_to, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+     ^
+/usr/include/c++/6/bits/valarray_after.h:415:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/stack:61:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:89,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_stack.h:299:5: note: candidate: template<class _Tp, class _Seq> bool std::operator!=(const std::stack<_Tp, _Seq>&, const std::stack<_Tp, _Seq>&)
+     operator!=(const stack<_Tp, _Seq>& __x, const stack<_Tp, _Seq>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_stack.h:299:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::stack<_Tp, _Seq>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/set:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:87,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_multiset.h:847:5: note: candidate: template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+     operator!=(const multiset<_Key, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_multiset.h:847:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::multiset<_Key, _Compare, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/set:61:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:87,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_set.h:864:5: note: candidate: template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+     operator!=(const set<_Key, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_set.h:864:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::set<_Key, _Compare, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/queue:64:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:86,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_queue.h:322:5: note: candidate: template<class _Tp, class _Seq> bool std::operator!=(const std::queue<_Tp, _Seq>&, const std::queue<_Tp, _Seq>&)
+     operator!=(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_queue.h:322:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::queue<_Tp, _Seq>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/vector:64:0,
+                 from /usr/include/c++/6/queue:61,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:86,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_vector.h:1533:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator!=(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator!=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_vector.h:1533:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::vector<_Tp, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/memory:82:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:82,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/shared_ptr.h:363:5: note: candidate: template<class _Tp> bool std::operator!=(std::nullptr_t, const std::shared_ptr<_Tp1>&)
+     operator!=(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+     ^~~~~~~~
+/usr/include/c++/6/bits/shared_ptr.h:363:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::shared_ptr<_Tp1>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/memory:82:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:82,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/shared_ptr.h:358:5: note: candidate: template<class _Tp> bool std::operator!=(const std::shared_ptr<_Tp1>&, std::nullptr_t)
+     operator!=(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/6/bits/shared_ptr.h:358:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::shared_ptr<_Tp1>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/memory:82:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:82,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/shared_ptr.h:352:5: note: candidate: template<class _Tp1, class _Tp2> bool std::operator!=(const std::shared_ptr<_Tp1>&, const std::shared_ptr<_Tp2>&)
+     operator!=(const shared_ptr<_Tp1>& __a,
+     ^~~~~~~~
+/usr/include/c++/6/bits/shared_ptr.h:352:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::shared_ptr<_Tp1>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/shared_ptr.h:52:0,
+                 from /usr/include/c++/6/memory:82,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:82,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/shared_ptr_base.h:1213:5: note: candidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)
+     operator!=(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+     ^~~~~~~~
+/usr/include/c++/6/bits/shared_ptr_base.h:1213:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/shared_ptr.h:52:0,
+                 from /usr/include/c++/6/memory:82,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:82,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/shared_ptr_base.h:1208:5: note: candidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)
+     operator!=(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/6/bits/shared_ptr_base.h:1208:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/shared_ptr.h:52:0,
+                 from /usr/include/c++/6/memory:82,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:82,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/shared_ptr_base.h:1202:5: note: candidate: template<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)
+     operator!=(const __shared_ptr<_Tp1, _Lp>& __a,
+     ^~~~~~~~
+/usr/include/c++/6/bits/shared_ptr_base.h:1202:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__shared_ptr<_Tp1, _Lp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/map:62:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:81,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_multimap.h:1000:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_multimap.h:1000:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::multimap<_Key, _Tp, _Compare, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/map:61:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:81,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_map.h:1335:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_map.h:1335:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::map<_Key, _Tp, _Compare, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/map:60:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:81,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_tree.h:1302:5: note: candidate: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator!=(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator!=(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_tree.h:1302:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/map:60:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:81,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_tree.h:334:5: note: candidate: template<class _Val> bool std::operator!=(const std::_Rb_tree_iterator<_Tp>&, const std::_Rb_tree_const_iterator<_Val>&)
+     operator!=(const _Rb_tree_iterator<_Val>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_tree.h:334:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::_Rb_tree_iterator<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/list:63:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:79,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_list.h:1894:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator!=(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)
+     operator!=(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_list.h:1894:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__cxx11::list<_Tp, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/list:63:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:79,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_list.h:293:5: note: candidate: template<class _Val> bool std::operator!=(const std::_List_iterator<_Tp>&, const std::_List_const_iterator<_Tp>&)
+     operator!=(const _List_iterator<_Val>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_list.h:293:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::_List_const_iterator<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/iterator:66:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:77,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stream_iterator.h:137:5: note: candidate: template<class _Tp, class _CharT, class _Traits, class _Dist> bool std::operator!=(const std::istream_iterator<_Tp, _CharT, _Traits, _Dist>&, const std::istream_iterator<_Tp, _CharT, _Traits, _Dist>&)
+     operator!=(const istream_iterator<_Tp, _CharT, _Traits, _Dist>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stream_iterator.h:137:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::istream_iterator<_Tp, _CharT, _Traits, _Dist>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/6/locale:43,
+                 from /usr/include/c++/6/iomanip:43,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:72,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/unique_ptr.h:678:5: note: candidate: template<class _Tp, class _Dp> bool std::operator!=(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)
+     operator!=(nullptr_t, const unique_ptr<_Tp, _Dp>& __x) noexcept
+     ^~~~~~~~
+/usr/include/c++/6/bits/unique_ptr.h:678:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/6/locale:43,
+                 from /usr/include/c++/6/iomanip:43,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:72,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/unique_ptr.h:673:5: note: candidate: template<class _Tp, class _Dp> bool std::operator!=(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)
+     operator!=(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/6/bits/unique_ptr.h:673:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/6/locale:43,
+                 from /usr/include/c++/6/iomanip:43,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:72,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/unique_ptr.h:667:5: note: candidate: template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator!=(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)
+     operator!=(const unique_ptr<_Tp, _Dp>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/unique_ptr.h:667:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:71:0,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/functional:2217:5: note: candidate: template<class _Res, class ... _Args> bool std::operator!=(std::nullptr_t, const std::function<_Res(_ArgTypes ...)>&)
+     operator!=(nullptr_t, const function<_Res(_Args...)>& __f) noexcept
+     ^~~~~~~~
+/usr/include/c++/6/functional:2217:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::function<_Res(_ArgTypes ...)>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:71:0,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/functional:2211:5: note: candidate: template<class _Res, class ... _Args> bool std::operator!=(const std::function<_Res(_ArgTypes ...)>&, std::nullptr_t)
+     operator!=(const function<_Res(_Args...)>& __f, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/6/functional:2211:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::function<_Res(_ArgTypes ...)>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/functional:55:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:71,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/tuple:1367:5: note: candidate: template<class ... _TElements, class ... _UElements> constexpr bool std::operator!=(const std::tuple<_Elements ...>&, const std::tuple<_Elements ...>&)
+     operator!=(const tuple<_TElements...>& __t,
+     ^~~~~~~~
+/usr/include/c++/6/tuple:1367:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::tuple<_Elements ...>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/tuple:39:0,
+                 from /usr/include/c++/6/functional:55,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:71,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/array:246:5: note: candidate: template<class _Tp, long unsigned int _Nm> bool std::operator!=(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)
+     operator!=(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+     ^~~~~~~~
+/usr/include/c++/6/array:246:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::array<_Tp, _Nm>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/deque:64:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:68,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_deque.h:2246:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator!=(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)
+     operator!=(const deque<_Tp, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_deque.h:2246:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::deque<_Tp, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/deque:64:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:68,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_deque.h:285:5: note: candidate: template<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator!=(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)
+     operator!=(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_deque.h:285:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::_Deque_iterator<_Tp, _Ref, _Ptr>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/deque:64:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:68,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_deque.h:278:5: note: candidate: template<class _Tp, class _Ref, class _Ptr> bool std::operator!=(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     operator!=(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_deque.h:278:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::_Deque_iterator<_Tp, _Ref, _Ptr>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/ccomplex:39:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/complex:486:5: note: candidate: template<class _Tp> constexpr bool std::operator!=(const _Tp&, const std::complex<_Tp>&)
+     operator!=(const _Tp& __x, const complex<_Tp>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/complex:486:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ is not derived from ‘const std::complex<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/ccomplex:39:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/complex:481:5: note: candidate: template<class _Tp> constexpr bool std::operator!=(const std::complex<_Tp>&, const _Tp&)
+     operator!=(const complex<_Tp>& __x, const _Tp& __y)
+     ^~~~~~~~
+/usr/include/c++/6/complex:481:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::complex<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/ccomplex:39:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/complex:476:5: note: candidate: template<class _Tp> constexpr bool std::operator!=(const std::complex<_Tp>&, const std::complex<_Tp>&)
+     operator!=(const complex<_Tp>& __x, const complex<_Tp>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/complex:476:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::complex<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/6/bits/basic_ios.h:37,
+                 from /usr/include/c++/6/ios:44,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/streambuf_iterator.h:210:5: note: candidate: template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^~~~~~~~
+/usr/include/c++/6/bits/streambuf_iterator.h:210:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/ios_base.h:46:0,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/system_error:323:3: note: candidate: bool std::operator!=(const std::error_condition&, const std::error_condition&)
+   operator!=(const error_condition& __lhs,
+   ^~~~~~~~
+/usr/include/c++/6/system_error:323:3: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ to ‘const std::error_condition&’
+/usr/include/c++/6/system_error:319:3: note: candidate: bool std::operator!=(const std::error_condition&, const std::error_code&)
+   operator!=(const error_condition& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/6/system_error:319:3: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ to ‘const std::error_condition&’
+/usr/include/c++/6/system_error:315:3: note: candidate: bool std::operator!=(const std::error_code&, const std::error_condition&)
+   operator!=(const error_code& __lhs, const error_condition& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/6/system_error:315:3: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ to ‘const std::error_code&’
+/usr/include/c++/6/system_error:311:3: note: candidate: bool std::operator!=(const std::error_code&, const std::error_code&)
+   operator!=(const error_code& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/6/system_error:311:3: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ to ‘const std::error_code&’
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5137:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5137:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5125:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5125:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   mismatched types ‘const _CharT*’ and ‘std::_List_iterator<std::__cxx11::basic_string<char> >’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5112:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5112:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/string:41:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/allocator.h:164:5: note: candidate: template<class _Tp> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_CharT>&)
+     operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+/usr/include/c++/6/bits/allocator.h:164:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::allocator<_CharT>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/string:41:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/allocator.h:158:5: note: candidate: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_T2>&)
+     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+/usr/include/c++/6/bits/allocator.h:158:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::allocator<_CharT>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:1131:5: note: candidate: template<class _Iterator> bool std::operator!=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator!=(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:1131:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::move_iterator<_IteratorL>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:1125:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator!=(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:1125:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::move_iterator<_IteratorL>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:361:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator!=(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:361:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:304:5: note: candidate: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator!=(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:304:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_pair.h:448:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_pair.h:448:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::pair<_T1, _T2>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/iosfwd:40:0,
+                 from /usr/include/c++/6/ios:38,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/postypes.h:221:5: note: candidate: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/6/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const std::fpos<_StateT>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/x86_64-linux-gnu/c++/6/bits/c++allocator.h:33:0,
+                 from /usr/include/c++/6/bits/allocator.h:46,
+                 from /usr/include/c++/6/string:41,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/ext/new_allocator.h:144:5: note: candidate: template<class _Tp> bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator!=(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^~~~~~~~
+/usr/include/c++/6/ext/new_allocator.h:144:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const __gnu_cxx::new_allocator<_Tp>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:877:5: note: candidate: template<class _Iterator, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:877:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/istream:38,
+                 from /usr/include/c++/6/sstream:38,
+                 from /usr/include/c++/6/complex:45,
+                 from /usr/include/c++/6/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:52,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:870:5: note: candidate: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator!=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:870:5: note:   template argument deduction/substitution failed:
+/home/amit/Documents/competitive/codeforces/4C.cpp:30:41: note:   ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’
+     for(it = v[h].begin(); it!=v[h].end(); it++){
+                                         ^
+/home/amit/Documents/competitive/codeforces/4C.cpp:32:9: error: ‘flag’ was not declared in this scope
+         flag = 1;
+         ^~~~
+/home/amit/Documents/competitive/codeforces/4C.cpp:36:8: error: ‘flag’ was not declared in this scope
+     if(flag == 1){
+        ^~~~
+/home/amit/Documents/competitive/codeforces/4C.cpp:37:31: error: ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka struct std::_List_iterator<std::__cxx11::basic_string<char> >}’ has no member named ‘second’
+       cout<<str+to_string(*it.second)<<endl;
+                               ^~~~~~
+/home/amit/Documents/competitive/codeforces/4C.cpp:38:11: error: ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka struct std::_List_iterator<std::__cxx11::basic_string<char> >}’ has no member named ‘second’
+       *it.second++;
+           ^~~~~~
+/home/amit/Documents/competitive/codeforces/4C.cpp:42:25: error: no matching function for call to ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::push_back(std::__cxx11::string&)’
+       v[h].push_back(str);
+                         ^
+In file included from /usr/include/c++/6/list:63:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:79,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_list.h:1097:7: note: candidate: void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::pair<std::__cxx11::basic_string<char>, int>; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, int> >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, int>]
+       push_back(const value_type& __x)
+       ^~~~~~~~~
+/usr/include/c++/6/bits/stl_list.h:1097:7: note:   no known conversion for argument 1 from ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ to ‘const value_type& {aka const std::pair<std::__cxx11::basic_string<char>, int>&}’
+/usr/include/c++/6/bits/stl_list.h:1102:7: note: candidate: void std::__cxx11::list<_Tp, _Alloc>::push_back(std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = std::pair<std::__cxx11::basic_string<char>, int>; _Alloc = std::allocator<std::pair<std::__cxx11::basic_string<char>, int> >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::pair<std::__cxx11::basic_string<char>, int>]
+       push_back(value_type&& __x)
+       ^~~~~~~~~
+/usr/include/c++/6/bits/stl_list.h:1102:7: note:   no known conversion for argument 1 from ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ to ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::value_type&& {aka std::pair<std::__cxx11::basic_string<char>, int>&&}’
+/home/amit/Documents/competitive/codeforces/4C.cpp:43:20: error: no match for ‘operator=’ (operand types are ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka std::_List_iterator<std::__cxx11::basic_string<char> >}’ and ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’)
+       it= v[h].end();
+                    ^
+In file included from /usr/include/c++/6/list:63:0,
+                 from /usr/include/x86_64-linux-gnu/c++/6/bits/stdc++.h:79,
+                 from /home/amit/Documents/competitive/codeforces/4C.cpp:1:
+/usr/include/c++/6/bits/stl_list.h:128:12: note: candidate: constexpr std::_List_iterator<std::__cxx11::basic_string<char> >& std::_List_iterator<std::__cxx11::basic_string<char> >::operator=(const std::_List_iterator<std::__cxx11::basic_string<char> >&)
+     struct _List_iterator
+            ^~~~~~~~~~~~~~
+/usr/include/c++/6/bits/stl_list.h:128:12: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ to ‘const std::_List_iterator<std::__cxx11::basic_string<char> >&’
+/usr/include/c++/6/bits/stl_list.h:128:12: note: candidate: constexpr std::_List_iterator<std::__cxx11::basic_string<char> >& std::_List_iterator<std::__cxx11::basic_string<char> >::operator=(std::_List_iterator<std::__cxx11::basic_string<char> >&&)
+/usr/include/c++/6/bits/stl_list.h:128:12: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::pair<std::__cxx11::basic_string<char>, int> >::iterator {aka std::_List_iterator<std::pair<std::__cxx11::basic_string<char>, int> >}’ to ‘std::_List_iterator<std::__cxx11::basic_string<char> >&&’
+/home/amit/Documents/competitive/codeforces/4C.cpp:44:11: error: ‘std::__cxx11::list<std::__cxx11::basic_string<char> >::iterator {aka struct std::_List_iterator<std::__cxx11::basic_string<char> >}’ has no member named ‘second’
+       *it.second++;
+           ^~~~~~
+/home/amit/Documents/competitive/codeforces/4C.cpp:46:5: error: ‘else’ without a previous ‘if’
+     else
+     ^~~~
+/home/amit/Documents/competitive/codeforces/4C.cpp:47:3: error: expected primary-expression before ‘}’ token
+   }
+   ^

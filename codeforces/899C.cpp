@@ -2,53 +2,47 @@
 using namespace std;
 
 typedef long long ll;
-typedef std::vector<int> vi;
+typedef std::vector<ll> vi;
 typedef pair< string,vi> pr;
 
-int main(int argc, char const *argv[]) {
-  int n;
-  cin>>n;
-  vi v;
-  if(n%2==0){
-      for(int i=1; i<=n; i+=3){
-        v.push_back(i);
-        if(i%4==0) i-=2;
-      }
-      if(n%4==0){
-        cout<<'0'<<endl;
-        cout<<v.size()<<' ';
-        for(int i=0; i<v.size(); i++){
-          cout<<v[i]<<' ';
-        }
-      }
 
-      else{
-        cout<<'1'<<endl;
-        cout<<v.size()<<' ';
-        for(int i=0; i<v.size(); i++){
-          cout<<v[i]<<' ';
-        }
+int main(int argc, char const *argv[]) {
+  ll n;
+  cin>>n;
+  ll sum1 = (n*(n+1))/2;
+  ll sum = sum1/2;
+  // cout<<sum<<endl;
+  ll tmp =0;
+  if(sum1%2==0)  tmp =1;
+  // cout<<"n="<<n<<endl;
+  vi v;
+  if(tmp == 1){
+    cout<<'0'<<endl;
+    for(int i =n; i>0;i-- ){
+      if(sum == 0) break;
+      if(sum>=i){
+        sum-=i;
+        v.push_back(i);
       }
+    }
   }
 
   else{
-    int n1 = n;
-    n--;
-    int sum = n1(n1+1)/2;
-    if(n%4==1){
-
-    }
-
-    else{
-      cout<<n<<endl;
-      v.push_back(n1);
-      cout<<v.size()<<' ';
-      for(int i=0; i<v.size(); i++){
-        cout<<v[i]<<' ';
+    cout<<'1'<<endl;
+    for(int i =n; i>0;i--){
+      // cout<<i<<endl;
+      if(sum == 0) break;
+      if(sum>=i){
+        sum-=i;
+        v.push_back(i);
       }
     }
   }
 
-
+  cout<<v.size()<<' ';
+  int temp = 0;
+  for(int i =0; i<v.size(); i++){
+    cout<<v[i]<<' ';
+  }
   return 0;
 }

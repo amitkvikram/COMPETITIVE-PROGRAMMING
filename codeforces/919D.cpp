@@ -1,3 +1,4 @@
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -21,29 +22,46 @@ public:
 };
 
 void func1(auto &v, int n, string &str){
-      int Max = 0;
+      int Max = 1;
       queue<ll> q;
       rep(i, 0, n){
             if(v[i].in_degree == 0){
                   q.push(i);
             }
       }
-
+    int cnt = 0;
       while(!q.empty()){
+            cnt++;
             ll tmp = q.front();
+            //cout<<tmp<<' '<<Max<<endl;
             q.pop();
             v[tmp].visited = true;
             for(auto it = v[tmp].adj.begin(); it!=v[tmp].adj.end(); it++){
-                  if(v[*it].visited == true) continue;
+                  //if(v[*it].visited == true) continue;
                   v[*it].in_degree -=1;
-                  (v[*it].cnt)[str[tmp] - 'a']++;
-                  if((v[*it].cnt)[str[tmp] - 'a'] > Max) Max = v[*it].cnt[str[tmp] - 'a'];
+                  
+                  if(v[tmp].cnt[str[*it] -'a'] + 1 > v[*it].cnt[str[*it] - 'a']){
+                      v[*it].cnt[str[*it] - 'a'] = v[tmp].cnt[str[*it] -'a'] + 1;
+                  }
+                
+                  rep(i, 0, 26){
+                      if(v[tmp].cnt[i] > v[*it].cnt[i]){
+                          v[*it].cnt[i] = v[tmp].cnt[i];
+                      }
+                      if( v[*it].cnt[i] > Max){
+                          Max =  v[*it].cnt[i];
+                      }
+                  }
+                
                   if(v[*it].in_degree == 0){
                         q.push(*it);
                   }
             }
-      }
-      cout<<Max<<endl;
+          //cout<<cnt<<' ';
+          //if(cnt>n) break;
+      } 
+      if(cnt!=n) cout<<"-1"<<endl;
+      else cout<<Max<<endl;
 }
 
 int main(int argc, char const *argv[]) {
@@ -55,10 +73,13 @@ int main(int argc, char const *argv[]) {
       vector<graphNode> v(n);
       for(int i =0; i<m; i++){
             cin>>a>>b;
-            v[a].adj.push_back(b);
+            a--; b--;
+            v[a].adj.pb(b);
             v[b].in_degree++;
       }
-
+      rep(i, 0, n){
+          (v[i].cnt)[str[i] - 'a']=1;
+      }
       func1(v, n, str);
 
       return 0;

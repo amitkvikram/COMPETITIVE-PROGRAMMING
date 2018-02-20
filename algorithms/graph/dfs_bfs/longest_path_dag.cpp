@@ -34,7 +34,7 @@ void longest_path(std::vector<graphNode> &v, int V, stack<int> &Topological, int
       while(!Topological.empty()){
             int tmp = Topological.top();
             Topological.pop();
-            if(v[s].dist!=-1000){
+            if(v[tmp].dist!=-1000){
                   for(auto it = v[tmp].adjList.begin(); it!= v[tmp].adjList.end(); it++){
                         if(v[(*it).first].dist< v[tmp].dist + (*it).second){
                               v[(*it).first].dist = v[tmp].dist + (*it).second;

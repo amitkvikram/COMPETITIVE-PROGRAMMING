@@ -1,0 +1,90 @@
+ol_num = {0,-1, 0, 1};
+
+class graphNode{
+public:
+      int parent = -1;
+      int sz = 1;
+      list<int> adjList;
+};
+
+int find(auto &v, int i){
+      while(v[i].parent != i){
+            // v[i].parent = v[v[i].parent].parent;
+            i = v[i].parent;
+      }
+
+      return i;
+}
+
+void union1(auto &v, int i, int j){
+      int x = find(v, i);
+      int y = find(v, j);
+      if(x == y) return;
+      if(v[x].sz > v[y].sz){
+            v[y].parent = x;
+            v[x].sz+=v[y].sz;
+      }
+      else{
+            v[x].parent = y;
+            v[y].sz+=v[x].sz;
+      }
+}
+
+bool is_connected(auto &v, int i, int j){
+      return find(v, i) == find(v, j);
+}
+
+int main(){
+      string s;
+      cin>>s;
+      if(s[0] == '1' || s[s.size()-1] == '1'){
+            cout<<-1<<endl;
+            return 0;
+      }
+      int cnt_0 = 0, cnt_1 = 0;
+      rep(i, 0, s.size()){
+            if(s[i] == '0') cnt_0++;
+            else cnt_1++;
+      }
+
+      if(cnt_0 < cnt_1+1){
+            cout<<-1<<endl;
+            return 0;
+      }
+      if(cnt_1 == 0){
+         cout<<s.size()<<endl;
+         rep(i, 0, s.size()){
+               cout<<1<<' '<<'0'<<endl;
+         }
+         return 0;
+      }
+      std::vector<char> tmp;
+      tmp.pb(s[0]);
+      int cnt = 0, flag = 0;
+      vi freq(s.size(), 1);
+      char curr = '0';
+      freq[0] = 0;
+      rep(i, 1, s.size()){
+            if(curr == '1' && s[i] == '1'){
+                  flag = 1;
+                  break;
+            }
+            else if(s[i]!=curr){
+                  freq[i] = 0;
+                  tmp.pb(s[i]);
+                  curr = s[i];
+            }
+      }
+      if(flag == 1) cout<<-1<<endl;
+      else{
+           cout<<1+s.size() - tmp.size()<<endl;
+           cout<<tmp.size()<<' ';
+           for(auto i:tmp){
+               cout<<i<<' ';
+           }
+           cout<<endl;
+           rep(i, 0, s.size()-tmp.size()){
+                cout<<1<<' '<<'0'<<endl;
+          }
+      }
+}

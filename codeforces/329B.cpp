@@ -1,85 +1,111 @@
-#include<bits/stdc++.h>
-using namespace std;
+    #include<bits/stdc++.h>
+    using namespace std;
 
-typedef long long ll;
-#define ff first
-#define ss second
-typedef pair< ll, ll > ii;
-#define rep(i, a, b) for(ll i =a; i<b; i++)
-#define pb push_back
-typedef std::vector<ll> vi;
-const ll mod = 1000000007;               //1e9+7
-const ll inf = LONG_MAX;
+    typedef long long ll;
+    #define ff first
+    #define ss second
+    typedef pair< ll, ll > ii;
+    #define rep(i, a, b) for(ll i =a; i<b; i++)
+    #define pb push_back
+    typedef std::vector<ll> vi;
+    const ll mod = 1000000007;               //1e9+7
+    const ll inf = LLONG_MAX;
 
-ll rowNum[] = {-1, 0, 0, 1};
-ll colNum[] = {0, -1, 1, 0};
+    ll rowNum[] = {-1, 0, 0, 1};
+    ll colNum[] = {0, -1, 1, 0};
 
-class graphNode{
-    public:
-      list<ii> adjList;
-      bool visited = false;
-      bool explored = false;
+    class graphNode{
+        public:
+        list<ii> adjList;
+        bool visited = false;
+        int id = -1;
+        int sz = 0;
+    };
 
-      ll dist = inf;
-      ll train = inf;
-};
+    int find(auto &v, int ind){
+        while(v[ind].id!=ind){
+            v[ind].id = v[v[ind].id].id;
+            ind = v[ind].id;
+        }
+        return ind;
+    }
 
-void dijkstra(auto &v, ll &res){
-    priority_queue<ii, vector<ii>, greater<ii>> pq;
-    pq.push({0, 0});
-    v[0].dist = 0;
-    while(!pq.empty()){
-        ii tmp = pq.top();
-        pq.pop();
-        ll ind = tmp.ss;
-        ll d = tmp.ff;
-        if(v[ind].visited == true)
-            continue;
-        if(v[ind].train != inf){
-            if(d <= v[ind].train ){
-                res++;
-            }
-            else{
-                v[ind].dist = d = v[ind].train;
+    void union1(auto &v, int i, int j){
+        int a = find(v, i);
+        int b = find(v, j);
+        if(a == b)
+            return;
+        if(v[a].sz < v[b].sz){
+            v[b].sz += v[a].sz;
+            v[b].id = a;
+        }
+        else{
+            v[a].sz += v[b].sz;
+            v[a].id = b;
+        }
+    }
+
+    bool connected(auto &v, int i, int j){
+        return find(i) == find(j);
+    }
+
+    int main()
+    {
+        int n;
+        cin >> n;
+        vector<vector<int>> adjmat(n, vector<int>(n));
+
+        vector<graphNode> v(n);
+        rep(i, 0, n){
+            v[i].id = i;
+        }
+
+        rep(i, 0, n){
+            rep(j, 0, n){
+                cin >> adjmat[i][j];
             }
         }
-        v[ind].visited = true;
-        for (auto i : v[ind].adjList)
+
+        bool flag = true;
+
+        rep(i, 0, n){
+            rep(j, i, n){
+                if(i == j){
+                    if(adjmat[i][j] != 0){
+                        flag = false;
+                        break;
+                    }
+                }
+                else{
+                    if(adjmat[i][j] != adjmat[j][i]){
+                        flag = false;
+                        break;
+                    }
+                    else{
+                        if(connected(v, i, j)){
+                            flag = false;
+                            break;
+                        }
+                        union1(v, i, j);
+                    }
+                }
+            }
+            if(flag == false)
+                break;
+        }
+
+        int cnt = 0;
+        rep(i, 0, n)
         {
-            if(v[i.ff].visited == false && v[i.ff].dist > d+i.ss){
-                v[i.ff].dist = d + i.ss;
-                pq.push({v[i.ff].dist, i.ff});
+            if(v[i].id == i)
+                cnt++;
+            if(cnt>1){
+                flag = false;
+                break;
             }
         }
+
+        
+
+        return 0;
     }
-}
-
-
-int main()
-{
-    ll n, m, k;
-    cin >> n >> m >> k;
-    ll a, b, wt;
-    vector<graphNode> v(n);
-    rep(i, 0, m){
-        cin >> a >> b >> wt;
-        a--;
-        b--;
-        v[a].adjList.push_back({b, wt});
-        v[b].adjList.pb({a, wt});
-
-    }
-     ll res = 0;
-
-    rep(i, 0, k){
-        cin >> a >> b;
-        a--;
-        if(b<v[a].train)
-            v[a].train = b;
-        else
-            res++;
-    }
-    dijkstra(v, res);
-    cout << res << endl;
-    return 0;
-}

@@ -63,7 +63,7 @@ int main(){
     cin>>t;
     while(t--){
         cin>>n>>m;
-        ll sum1 = 0; sum2 = 0;
+        ll sum1 = 0, sum2 = 0;
         for(int i = 0; i<n; i++){
             cin>>A[i];
             sum1+=A[i];
@@ -80,6 +80,15 @@ int main(){
         else{
             if(n!=m){
                 cout<<"Alice\n";
+            }
+            else{
+                for(int i = 0; i<n; i++){
+                    if(A[i]!=B[i]){
+                        cout<<"Alice\n";
+                        break;
+                    }
+                }
+                cout<<"Bob\n";
             }
         }
     }

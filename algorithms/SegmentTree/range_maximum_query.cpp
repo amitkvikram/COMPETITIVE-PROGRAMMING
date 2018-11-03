@@ -8,7 +8,9 @@ int getMid(int left, int right){
 }
 
 void updateValueHelper(vi &v, vi &segmentTree, int left, int right, int nodeIndex, int val, int index){
-    if(index < left || index > right) return;
+    //if index is not in range of current node
+    if (index < left || index > right)
+        return;
 
     if(left == right){
         // cout<<"left = "<<left<   <" Index = "<<index<<endl;

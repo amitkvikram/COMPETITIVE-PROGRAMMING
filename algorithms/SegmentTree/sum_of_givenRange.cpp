@@ -28,11 +28,13 @@ void updateValueHelper(vi *segment_tree_ptr, int left, int right, int index, int
     int mid = getMid(left, right);
     updateValueHelper(segment_tree_ptr, left, mid, index, diff, 2*nodeIndex+1);
     updateValueHelper(segment_tree_ptr, mid + 1, right, index, diff, 2*nodeIndex + 2);
+
+    (*segment_tree_ptr)[nodeIndex] = (*segment_tree_ptr)[2 * nodeIndex + 1] +
+                                     (*segment_tree_ptr)[2 * nodeIndex + 2];
 }
 
 void updateValue(vi *segment_tree_ptr, int index, vi &v, int value){
     if(index<0 || index>v.size() - 1) return;
-    int diff = value - v[index];
     v[index] = value;
 
     updateValueHelper(segment_tree_ptr, 0, v.size() - 1, index, diff, 0);
@@ -49,7 +51,7 @@ int getSumHelper(vi *segment_tree_ptr, int left, int right, int nodeIndex, int l
         return (*segment_tree_ptr)[nodeIndex];
     }
 
-    //Upto now we have hadled the case left == right because then range [left, right] will either be completely inside [l, t]
+    //Upto now we have handled the case left == right because then range [left, right] will either be completely inside [l, r]
     //OR there will be no overlap b/w [l, r] and [left, right]
     //If there is overlap between [l, r] and [left, right]
     int mid = getMid(left, right);

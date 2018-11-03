@@ -45,9 +45,8 @@ int  getXorHelper(vi &segmentTree, vi &v, int left, int right, int nodeIndex, in
     }
 
     int mid = getMid(left, right);
-    segmentTree[nodeIndex] = getXorHelper(segmentTree, v, left, mid, 2*nodeIndex +1 , l, r)^
+    return getXorHelper(segmentTree, v, left, mid, 2*nodeIndex +1 , l, r)^
                         getXorHelper(segmentTree, v, mid + 1, right, 2*nodeIndex + 2, l, r);
-    return segmentTree[nodeIndex];
 }
 
 int getXor(vi &segmentTree, vi &v, int l, int r){

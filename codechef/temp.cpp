@@ -1,11 +1,16 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
-{
- int randNum = (rand() % 100) + 1;
- for (randNum = (rand() % 100) + 1; randNum != 100;randNum = (rand() % 100) + 1){
-     cout << randNum << ", ";
- }
- cout << endl;
- return 0;
+class Temp{
+    public:
+        int a;
+        int b;
+    Temp(int x, int y){
+        a = x;
+        b = y;
+    }
+};
+
+int main(){
+    Temp obj1(2, 3);
+    cout<< obj1.a<<" " << obj1.b<<endl;
 }

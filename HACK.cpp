@@ -46,10 +46,31 @@ const ll mod = 1000000007;
   //myCompare for min Heap according to school.c
   class myCompare{
       public:
-      	int operator()(const school &s1, const school &s2){
+      	bool operator()(const school &s1, const school &s2){
       		return s1.c > s2.c;
 	}
   }
+
+// compare Function for equality check in unordered_set
+class myCompare2{
+    public:
+    bool operator()(const State &s1,const State &s2) const{
+        return s1.coord.x == s2.coord.x && s1.coord.y == s2.coord.y 
+                && s1.move == s2.move;
+    }
+};
+
+// hash function for unordered set/unordered_map
+class myHash{
+    public:
+    std::size_t operator()(const State &s) const{
+        size_t res = 17;
+
+        res = res*31 + hash<int>()(s.coord.x);
+        res = res*31 + hash<int>()(s.coord.y);
+        res = res * 31 + hash<char>()(s.move);
+    }
+};
 
 */
 

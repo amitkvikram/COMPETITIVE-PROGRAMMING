@@ -1,21 +1,25 @@
-#include "bits/stdc++.h"
+#include<bits/stdc++.h>
 using namespace std;
 
-int main(int argc, char const *argv[]) {
+void swap(char *a, char *b){
+      char temp = *a;
+      *a = *b;
+      *b = temp;
+}
+
+int main(){
       int n, t;
       cin>>n>>t;
-
-      string str;
-      cin>>str;
-      for(int j =0; j<t; j++){
-            for(int i=1; i<n; i++){
-                  if(str[i] =='G' && str[i-1] =='B'){
-                        str[i]='B';
-                        str[i-1]='G';
-                        i++;
+      string s;
+      cin>>s;
+      for(int i = 0; i<t; i++){
+            for(int j = 0; j<n-1; j++){
+                  if(s[j] == 'B' && s[j + 1] == 'G'){
+                        swap(&s[j], &s[j + 1]);
+                        j++;
                   }
             }
       }
-      cout<<str;
-      return 0;
+
+      cout<<s<<endl;
 }

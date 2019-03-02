@@ -1,81 +1,86 @@
 #include<bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-typedef std::vector<int> vi;
-typedef pair<int,int> pi;
-#define ss second
-#define ff first
-// const int inf = INT_MAX;
-bool status = false;
 
-bool is_valid(int n, int m, int i, int j){
-      return i<n && j<m && i>-1 && j>-1;
+typedef vector<int> vi;
+typedef vector<bool> vb;
+typedef pair<int, int> ii;
+#define ff first
+#define ss second
+
+class pqNode{
+    public:
+    ii node;
+    int waterLevel;
+
+    pqNode(ii x,  int z){
+        node = x;
+        waterLevel = z;
+    }
+};
+
+bool check(int x, int n){
+    return x >=0 && x < n;
 }
 
-int adjacent_row[] = {-1, 1, 0, 0};
-int adjacent_col[] = {0, 0, -1, 1};
-
-class cell{
-public:
-
-      int row;
-      int col;
-};
-
-class queue_element{
-    public:
-      int wall;
-      int cell;
-      int water_level;
-};
-
-
 int main(){
-      int n, k;
-      cin>>n>>k;
+    int n, k;
+    cin>>n>>k;
+    string wall[2];
+    cin>>wall[0]>>wall[1];
 
-      string wall[2];
-      cin>>wall[0]>>wall[1];
-      queue<queue_element> q;
-      q.push({0, 0, 0});
-      wall[0][0] = 'X';
-      while (!q.empty())
-      {
-          queue_element tmp = q.front();
-          q.pop();
-        //   cout << tmp.cell << ' ' << tmp.wall << ' ' << tmp.water_level << endl;
-          if (tmp.cell > n - 1)
-          {
-            //   cout << tmp.cell << ' ' << tmp.wall << endl;
-              status = true;
-              break;
-          }
+    vector<vb> visited(n, vb(2, false));
 
-          //Climb up
-          if(tmp.cell + 1 > n- 1 || (wall[tmp.wall][tmp.cell + 1]!='X')){
-              q.push({tmp.wall, tmp.cell + 1, tmp.water_level + 1});
-              if(tmp.cell + 1 <n)
-                  wall[tmp.wall][tmp.cell + 1] = 'X';
-          }
+    bool res = false;
+    queue<pqNode> q;
 
-          //Climb Down
-          if(tmp.cell - 1> - 1 && wall[tmp.wall][tmp.cell -1 ]!='X' && tmp.cell - 1 > tmp.water_level){
-              q.push({tmp.wall, tmp.cell - 1, tmp.water_level + 1 });
-              if(tmp.cell - 1 > - 1)
-                  wall[tmp.wall][tmp.cell - 1] = 'X';
-          }
+    q.push(pqNode({0, 0}, 0));
+    visited[0][0] = true;
+    int x, y;
 
-          //Jump
 
-          if(tmp.cell + k > n - 1 || wall[1 - tmp.wall][tmp.cell + k]!='X'){
-              q.push({1 - tmp.wall, tmp.cell + k, tmp.water_level + 1});
-              if(tmp.cell + k<n )
-                  wall[1 - tmp.wall][tmp.cell + k] = 'X';
-          }
-      }
+    while(!q.empty()){
+        pqNode curr = q.front();
+        q.pop();
 
-      if(status == true) cout<<"YES\n";
-      else cout<<"NO\n";
+        //one area up
+        x = curr.node.ff + 1;
+        y = curr.node.ss;
 
-      return 0;
+        if(x >= n){
+            res = true;
+            break;
+        }
+
+        if(check(x, n) && !visited[x][y] && curr.waterLevel < x && wall[y][x] != 'X'){
+            visited[x][y] = true;
+            q.push(pqNode({x, y}, curr.waterLevel + 1));
+        }
+
+        //one area down
+        x = curr.node.ff - 1;
+        y = curr.node.ss;
+
+        if(check(x, n) && !visited[x][y] && curr.waterLevel < x && wall[y][x] != 'X'){
+            visited[x][y] = true;
+            q.push(pqNode({x, y}, curr.waterLevel + 1));
+        }
+
+        //jump to opposite wall
+        x = curr.node.ff + k;
+        y = 1 - curr.node.ss;
+        if(x >= n){
+            res = true;
+            break;
+        }
+
+        if(check(x, n) && !visited[x][y] && curr.waterLevel< x && wall[y][x] != 'X'){
+            visited[x][y] = true;
+            q.push(pqNode({x, y}, curr.waterLevel + 1));
+        }
+    }
+
+    if(res){
+        cout<<"YES\n";
+    }
+    else cout<<"NO\n";
 }

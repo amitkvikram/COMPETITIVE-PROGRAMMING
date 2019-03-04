@@ -5,6 +5,7 @@ typedef vector<int> vi;
 
 int n;
 
+//This is nothing but the calculation of fibonnaci(n)
 int getCnt(int i){
     if(i >= n){
         return 1;

@@ -9,7 +9,7 @@ typedef vector<int> vi;
 int n;
 vi v;
 
-vector<vi> dp(100, vi(1000, -1));
+vector<vector<bool>> dp(100, vector<bool>(1000));
 
 bool checkSum(int i, int sum){
     if(sum == 0) return true;
@@ -35,5 +35,19 @@ int main(){
         dp[i][0] = true;
     }
 
-    
+    for(int i = 1; i < n; i++){
+        dp[0][i] = false;
+    }
+
+    for(int i = 1; i < n; i++){
+        for(int j = 1; j <= sum; j++){
+            if(j >= v[i]){
+                dp[i][j] = dp[i - 1][j] || dp[i - 1][j - v[i]];
+            }else{
+                dp[i][j] = dp[i - 1][j];
+            }
+        }
+    }
+
+    cout<<dp[n - 1][sum]<<endl;
 }
